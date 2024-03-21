@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import SidebarProduct from "./SidebarProduct";
 import { Link } from "react-router-dom";
-import Product from "./Product";
 
 export default function SidebarCart({
   setShowSidebarCart,

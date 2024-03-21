@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../Header";
-import SidebarCart from "../SidebarCart";
 import ProductsList from "../ProductsList";
 import ExclusiveSection from "../ExclusiveSection";
 import TestimonialsList from "../TestimonialsList";
