@@ -1,0 +1,88 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Liz",
+      "image": "/images/products/product-4.png",
+      "rating": 4,
+      "price": 120
+    },
+    {
+      "id": 2,
+      "name": "Glamour",
+      "image": "/images/products/product-5.png",
+      "rating": 5,
+      "price": 120
+    },
+    {
+      "id": 3,
+      "name": "Thaty",
+      "image": "/images/products/product-6.png",
+      "rating": 5,
+      "price": 80
+    },
+    {
+      "id": 4,
+      "name": "Quasar",
+      "image": "/images/products/product-7.png",
+      "rating": 3,
+      "price": 175
+    },
+    {
+      "id": 5,
+      "name": "Elysée",
+      "image": "/images/products/product-8.png",
+      "rating": 5,
+      "price": 115
+    },
+    {
+      "id": 6,
+      "name": "Her Code",
+      "image": "/images/products/product-9.png",
+      "rating": 5,
+      "price": 110
+    },
+    {
+      "id": 7,
+      "name": "Glamour - Diva",
+      "image": "/images/products/product-10.png",
+      "rating": 4,
+      "price": 95
+    },
+    {
+      "id": 8,
+      "name": "Celebre Agora",
+      "image": "/images/products/product-11.png",
+      "rating": 4,
+      "price": 80
+    },
+    {
+      "id": 9,
+      "name": "Men - Only",
+      "image": "/images/products/product-12.png",
+      "rating": 5,
+      "price": 85
+    },
+    {
+      "id": 10,
+      "name": "EGEO - Original",
+      "image": "/images/products/product-13.png",
+      "rating": 5,
+      "price": 140
+    },
+    {
+      "id": 11,
+      "name": "ARBO",
+      "image": "/images/products/product-14.png",
+      "rating": 5,
+      "price": 84
+    },
+    {
+      "id": 12,
+      "name": "Natura - Homem",
+      "image": "/images/products/product-15.png",
+      "rating": 5,
+      "price": 90
+    }
+  ]
+}
