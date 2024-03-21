@@ -40,6 +40,7 @@ function App() {
         <Navbar
           selectedProducts={selectedProducts}
           setShowSidebarCart={setShowSidebarCart}
+          addProductToCart={addProductToCart}
         />
         <SidebarCart
           addToCartTotal={addToCartTotal}

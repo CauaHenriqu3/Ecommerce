@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import {
   faBars,
   faSearch,
@@ -5,10 +6,38 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import ProductModal from "./ProductModal";
 
-export default function Navbar({ setShowSidebarCart, selectedProducts }) {
+export default function Navbar({
+  setShowSidebarCart,
+  selectedProducts,
+  addProductToCart
+}) {
   const [show, setShow] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    // Fetch products from db.json
+    fetch("/db.json")
+      .then((response) => response.json())
+      .then((data) => setProducts(data.products))
+      .catch((error) => console.error("Error fetching products:", error));
+  }, []);
+
+  const handleSearch = (event) => {
+    const value = event.target.value;
+    setSearchTerm(value);
+    if (value === "") {
+      setSearchResults([]);
+    } else {
+      const results = products.filter((product) =>
+        product.name.toLowerCase().includes(value.toLowerCase())
+      );
+      setSearchResults(results);
+    }
+  };
 
   return (
     <div className="nav">
@@ -37,7 +66,12 @@ export default function Navbar({ setShowSidebarCart, selectedProducts }) {
         </nav>
         <div className="navs-icon-container">
           <div className="search-input-container">
-            <input type="search" placeholder="Procurar" />
+            <input
+              type="search"
+              placeholder="Procurar"
+              value={searchTerm}
+              onChange={handleSearch}
+            />
             <FontAwesomeIcon icon={faSearch} />
           </div>
           <button
@@ -51,6 +85,16 @@ export default function Navbar({ setShowSidebarCart, selectedProducts }) {
             <FontAwesomeIcon icon={faBars} />
           </button>
         </div>
+      </div>
+      <div>
+        {searchResults.map((product) => (
+          <ProductModal
+            className="product"
+            key={product.id}
+            {...product}
+            addProductToCart={addProductToCart}
+          />
+        ))}
       </div>
     </div>
   );

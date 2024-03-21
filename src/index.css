@@ -259,28 +259,47 @@ header .right-side img{
     flex-direction: column;
 }
 
-.product .buttons{
+.product-modal{
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.product-modal img{
+    max-width: 400px;
+}
+
+.product .buttons,
+.product-modal .buttons{
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     margin-top: 1rem;
 }
 
-.product .name {
+.product .name,
+.product-modal .name {
     font-weight: bold;
     margin-top: 0.4rem;
 }
 
-.product .price{
+.product .price,
+.product-modal.price{
     margin-top: 0.4rem;
 }
 
-.product .price span{
+.product .price span,
+.product-modal .price span{
     font-weight: bold;
 }
 
 .product .rate,
-.testimonial .rate{
+.testimonial .rate,
+.product-modal .rate{
     color: var(--secondary-color);
     font-size: 1.3rem;
 }
