@@ -29,7 +29,7 @@ export default function Navbar({
   const handleSearch = (event) => {
     const value = event.target.value;
     setSearchTerm(value);
-    if (value === "") {
+    if (value == "") {
       setSearchResults([]);
     } else {
       const results = products.filter((product) =>
@@ -86,6 +86,7 @@ export default function Navbar({
           </button>
         </div>
       </div>
+      <aside className="sidebar-modal">
       <div>
         {searchResults.map((product) => (
           <ProductModal
@@ -96,6 +97,7 @@ export default function Navbar({
           />
         ))}
       </div>
-    </div>
+      </aside>
+      </div>
   );
 }

@@ -8,6 +8,7 @@ export default function Product({
   image,
   name,
   rate,
+  link,
   price,
   addProductToCart,
 }) {
@@ -22,7 +23,7 @@ export default function Product({
       </p>
 
       <div className="buttons">
-        <Link to={"products/123/checkout"} className="btn-icon">
+        <Link to={link} className="btn-icon">
           <span>Comprar Agora</span>
           <FontAwesomeIcon icon={faMoneyBill} />
         </Link>
@@ -32,6 +33,7 @@ export default function Product({
         >
           <span>Adicionar ao Carrinho</span>
           <FontAwesomeIcon icon={faCartShopping} />
+          
         </button>
       </div>
     </div>
