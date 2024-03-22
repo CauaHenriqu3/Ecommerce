@@ -7,7 +7,6 @@ export default function Product({
   id,
   image,
   name,
-  rate,
   link,
   price,
   addProductToCart,

@@ -29,7 +29,7 @@ export default function Navbar({
   const handleSearch = (event) => {
     const value = event.target.value;
     setSearchTerm(value);
-    if (value == "") {
+    if (value === "") {
       setSearchResults([]);
     } else {
       const results = products.filter((product) =>
